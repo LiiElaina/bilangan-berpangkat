@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Belajar MTK SMK Mutuharjo</title>
+    
+    <!-- Menggunakan Tailwind CSS untuk styling yang cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Menggunakan Google Fonts untuk tipografi yang lebih baik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menerapkan font Inter ke seluruh halaman */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style untuk transisi yang mulus */
+        .content-section {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .hidden-section {
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+            position: absolute;
+        }
+        /* Custom scrollbar agar lebih modern */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38bdf8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 antialiased">
+
+    <!-- Kontainer Utama -->
+    <div class="container mx-auto p-4 md:p-8">
+
+        <!-- ===== HALAMAN UTAMA - MATERI BILANGAN BERPANGKAT ===== -->
+        <main id="mainContent" class="content-section">
+            
+            <!-- Header -->
+            <header class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300">
+                    Web Belajar MTK SMK Mutuharjo
+                </h1>
+                <p class="text-slate-400 mt-2">Materi Bilangan Berpangkat (Eksponen)</p>
+            </header>
+
+            <!-- 1. Definisi Bilangan Berpangkat -->
+            <section id="definisi" class="mb-12 bg-slate-800/50 p-6 rounded-2xl shadow-lg backdrop-blur-sm border border-slate-700">
+                <h2 class="text-2xl font-bold mb-4 text-sky-400 border-l-4 border-sky-400 pl-4">1. Apa itu Bilangan Berpangkat?</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Bilangan berpangkat (atau eksponen) adalah bentuk perkalian berulang dari suatu bilangan yang sama. Secara umum, jika <span class="font-mono bg-slate-700 px-2 py-1 rounded">a</span> adalah bilangan real (basis) dan <span class="font-mono bg-slate-700 px-2 py-1 rounded">n</span> adalah bilangan bulat positif (pangkat/eksponen), maka <span class="font-bold text-yellow-300 font-mono">a<sup>n</sup></span> didefinisikan sebagai:
+                </p>
+                <div class="my-4 p-4 bg-slate-900 rounded-lg text-center">
+                    <p class="text-xl font-mono text-cyan-300">a<sup>n</sup> = a × a × a × ... × a &nbsp; (sebanyak n kali)</p>
+                </div>
+                <p class="text-slate-300 leading-relaxed">
+                    Contoh: <span class="font-mono text-yellow-300">3<sup>4</sup></span> artinya 3 × 3 × 3 × 3 = 81.
+                </p>
+                <div class="mt-6 text-right">
+                    <a href="https://akupintar.id/info-pintar/-/blogs/bilangan-berpangkat-pengertian-sifat-operasi-dan-contoh-soal" target="_blank" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2. Sifat-sifat Bilangan Berpangkat -->
+            <section id="sifat" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-sky-400 border-l-4 border-sky-400 pl-4">2. Sifat-sifat Penting</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Sifat 1 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">a<sup>m</sup> ⋅ a<sup>n</sup> = a<sup>m+n</sup></p>
+                        <p class="text-sm text-slate-400">Perkalian dengan basis sama, pangkat dijumlahkan.</p>
+                    </div>
+                    <!-- Sifat 2 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">a<sup>m</sup> / a<sup>n</sup> = a<sup>m-n</sup></p>
+                        <p class="text-sm text-slate-400">Pembagian dengan basis sama, pangkat dikurangkan.</p>
+                    </div>
+                    <!-- Sifat 3 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">(a<sup>m</sup>)<sup>n</sup> = a<sup>m×n</sup></p>
+                        <p class="text-sm text-slate-400">Pangkat dipangkatkan lagi, pangkatnya dikalikan.</p>
+                    </div>
+                    <!-- Sifat 4 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">(a ⋅ b)<sup>n</sup> = a<sup>n</sup> ⋅ b<sup>n</sup></p>
+                        <p class="text-sm text-slate-400">Perkalian dalam kurung, semua elemen dipangkatkan.</p>
+                    </div>
+                    <!-- Sifat 5 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">a<sup>0</sup> = 1</p>
+                        <p class="text-sm text-slate-400">Setiap bilangan (kecuali 0) pangkat 0 hasilnya 1.</p>
+                    </div>
+                    <!-- Sifat 6 -->
+                    <div class="bg-slate-800 p-5 rounded-xl shadow-md hover:shadow-cyan-500/20 hover:-translate-y-1 transition-all">
+                        <p class="font-mono text-lg text-cyan-300 mb-2">a<sup>-n</sup> = 1 / a<sup>n</sup></p>
+                        <p class="text-sm text-slate-400">Pangkat negatif menjadi pangkat positif jika dibalik.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Persamaan Eksponen -->
+            <section id="persamaan" class="mb-12">
+                <h2 class="text-2xl font-bold mb-4 text-sky-400 border-l-4 border-sky-400 pl-4">3. Bentuk Persamaan Eksponen</h2>
+                 <p class="text-slate-300 leading-relaxed mb-6">
+                     Persamaan eksponen adalah persamaan yang pangkatnya mengandung variabel. Kunci menyelesaikannya adalah dengan menyamakan basis di kedua ruas.
+                </p>
+                <div class="bg-slate-800/50 p-6 rounded-2xl shadow-lg border border-slate-700">
+                    <p class="text-lg font-semibold text-yellow-300">Bentuk Dasar:</p>
+                    <p class="font-mono text-cyan-300 mt-2">Jika a<sup>f(x)</sup> = a<sup>p</sup>, maka f(x) = p</p>
+                    <p class="font-mono text-cyan-300 mt-2">Jika a<sup>f(x)</sup> = a<sup>g(x)</sup>, maka f(x) = g(x)</p>
+                    <p class="text-slate-400 mt-4 text-sm">(Dengan syarat basis <span class="font-mono">a > 0</span> dan <span class="font-mono">a ≠ 1</span>)</p>
+                </div>
+            </section>
+
+            <!-- 4. Contoh Soal dan Jawaban -->
+            <section id="contoh" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-sky-400 border-l-4 border-sky-400 pl-4">4. Contoh Soal & Pembahasan</h2>
+                <div class="space-y-6">
+                    <!-- Soal 1 -->
+                    <div class="bg-slate-800 p-5 rounded-xl">
+                        <p class="font-semibold">Soal 1: Sederhanakan bentuk (2<sup>3</sup> × 2<sup>5</sup>) / 2<sup>6</sup></p>
+                        <button onclick="toggleAnswer('answer1', this)" class="mt-3 text-sm bg-gray-600 hover:bg-gray-500 text-white py-1 px-3 rounded-md transition">Tampilkan Jawaban</button>
+                        <div id="answer1" class="hidden mt-4 pt-4 border-t border-slate-600">
+                            <p class="text-slate-300 font-semibold">Langkah-langkah:</p>
+                            <ol class="list-decimal list-inside text-slate-400 mt-2 space-y-1">
+                                <li>Gunakan sifat perkalian: 2<sup>3</sup> × 2<sup>5</sup> = 2<sup>3+5</sup> = 2<sup>8</sup>.</li>
+                                <li>Gunakan sifat pembagian: 2<sup>8</sup> / 2<sup>6</sup> = 2<sup>8-6</sup> = 2<sup>2</sup>.</li>
+                                <li>Hasil akhir: 2<sup>2</sup> = 4.</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- Soal 2 -->
+                    <div class="bg-slate-800 p-5 rounded-xl">
+                        <p class="font-semibold">Soal 2: Tentukan nilai x dari persamaan 5<sup>2x-1</sup> = 125</p>
+                        <button onclick="toggleAnswer('answer2', this)" class="mt-3 text-sm bg-gray-600 hover:bg-gray-500 text-white py-1 px-3 rounded-md transition">Tampilkan Jawaban</button>
+                        <div id="answer2" class="hidden mt-4 pt-4 border-t border-slate-600">
+                            <p class="text-slate-300 font-semibold">Langkah-langkah:</p>
+                            <ol class="list-decimal list-inside text-slate-400 mt-2 space-y-1">
+                                <li>Samakan basis kedua ruas. Kita tahu bahwa 125 = 5<sup>3</sup>.</li>
+                                <li>Persamaan menjadi: 5<sup>2x-1</sup> = 5<sup>3</sup>.</li>
+                                <li>Karena basis sudah sama, kita samakan pangkatnya: 2x - 1 = 3.</li>
+                                <li>Selesaikan aljabar: 2x = 4, sehingga x = 2.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 5. Latihan Interaktif -->
+            <section id="latihan" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 text-sky-400 border-l-4 border-sky-400 pl-4">5. Uji Pemahamanmu!</h2>
+                <div class="bg-gradient-to-br from-sky-500 to-indigo-600 p-6 rounded-2xl text-white text-center shadow-2xl">
+                    <p id="questionText" class="text-2xl font-bold mb-4">Berapakah hasil dari 2<sup>5</sup>?</p>
+                    <input type="number" id="answerInput" class="text-black w-full md:w-1/2 mx-auto p-3 rounded-lg text-center text-xl font-bold" placeholder="Ketik jawabanmu di sini...">
+                    <div class="mt-4">
+                        <button id="checkAnswerBtn" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-2 px-6 rounded-lg mr-2 transition-transform transform hover:scale-105">Cek Jawaban</button>
+                        <button id="nextQuestionBtn" class="bg-slate-700 hover:bg-slate-600 font-bold py-2 px-6 rounded-lg transition-transform transform hover:scale-105">Soal Berikutnya</button>
+                    </div>
+                    <p id="feedbackText" class="mt-4 h-6 font-semibold text-lg"></p>
+                </div>
+            </section>
+
+            <!-- Tombol Navigasi ke Halaman Lain -->
+            <footer class="text-center mt-16">
+                <button id="goToOtherTopicsBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-lg">
+                    Jelajahi Materi Lain
+                </button>
+            </footer>
+
+        </main>
+
+        <!-- ===== HALAMAN KEDUA - PILIH MATERI LAIN ===== -->
+        <div id="otherTopicsPage" class="content-section hidden-section h-screen flex flex-col items-center justify-center text-center">
+            <h2 class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300 mb-8">Pilih Topik Matematika</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+                <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Logaritma</h3>
+                    <p class="text-slate-400 text-sm mt-1">Kebalikan dari eksponen.</p>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Trigonometri</h3>
+                    <p class="text-slate-400 text-sm mt-1">Sin, Cos, dan Tan.</p>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Matriks</h3>
+                    <p class="text-slate-400 text-sm mt-1">Susunan bilangan.</p>
+                </a>
+                <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Limit Fungsi</h3>
+                    <p class="text-slate-400 text-sm mt-1">Pendekatan nilai.</p>
+                </a>
+                 <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Turunan</h3>
+                    <p class="text-slate-400 text-sm mt-1">Laju perubahan.</p>
+                </a>
+                 <a href="#" class="bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-green-500/20 hover:-translate-y-1 transition-all">
+                    <h3 class="text-xl font-bold text-green-400">Integral</h3>
+                    <p class="text-slate-400 text-sm mt-1">Anti-turunan.</p>
+                </a>
+            </div>
+            <button id="backToMainBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-lg">
+                Kembali ke Materi Eksponen
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        // --- SCRIPT UNTUK INTERAKTIVITAS ---
+
+        // 1. Fungsi untuk toggle jawaban pada contoh soal
+        function toggleAnswer(elementId, button) {
+            const answerDiv = document.getElementById(elementId);
+            const isHidden = answerDiv.classList.toggle('hidden');
+            if (isHidden) {
+                button.textContent = 'Tampilkan Jawaban';
+                button.classList.remove('bg-red-500', 'hover:bg-red-600');
+                button.classList.add('bg-gray-600', 'hover:bg-gray-500');
+            } else {
+                button.textContent = 'Sembunyikan Jawaban';
+                button.classList.remove('bg-gray-600', 'hover:bg-gray-500');
+                button.classList.add('bg-red-500', 'hover:bg-red-600');
+            }
+        }
+
+        // 2. Logika untuk Latihan Interaktif
+        const questionText = document.getElementById('questionText');
+        const answerInput = document.getElementById('answerInput');
+        const checkAnswerBtn = document.getElementById('checkAnswerBtn');
+        const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+        const feedbackText = document.getElementById('feedbackText');
+
+        let currentCorrectAnswer;
+
+        const questions = [
+            { question: "2<sup>5</sup>", answer: 32 },
+            { question: "3<sup>3</sup>", answer: 27 },
+            { question: "5<sup>2</sup>", answer: 25 },
+            { question: "10<sup>3</sup>", answer: 1000 },
+            { question: "7<sup>0</sup>", answer: 1 },
+            { question: "4<sup>-1</sup>", answer: 0.25 },
+            { question: "2<sup>10</sup>", answer: 1024 },
+            { question: "6<sup>2</sup>", answer: 36 },
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function generateQuestion() {
+            const q = questions[currentQuestionIndex];
+            questionText.innerHTML = Berapakah hasil dari <span class="font-mono text-yellow-300">${q.question}</span>?;
+            currentCorrectAnswer = q.answer;
+            answerInput.value = '';
+            feedbackText.textContent = '';
+            answerInput.focus();
+        }
+
+        function checkAnswer() {
+            const userAnswer = parseFloat(answerInput.value);
+            if (isNaN(userAnswer)) {
+                feedbackText.textContent = 'Mohon masukkan jawaban berupa angka.';
+                feedbackText.style.color = '#f87171'; // red-400
+                return;
+            }
+
+            if (userAnswer === currentCorrectAnswer) {
+                feedbackText.textContent = 'Benar! Jawabanmu Tepat!';
+                feedbackText.style.color = '#4ade80'; // green-400
+            } else {
+                feedbackText.textContent = Salah. Jawaban yang benar adalah ${currentCorrectAnswer}.;
+                feedbackText.style.color = '#f87171'; // red-400
+            }
+        }
+        
+        function nextQuestion() {
+            currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
+            generateQuestion();
+        }
+
+        checkAnswerBtn.addEventListener('click', checkAnswer);
+        nextQuestionBtn.addEventListener('click', nextQuestion);
+        answerInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                checkAnswer();
+            }
+        });
+
+        // 3. Logika untuk navigasi antar halaman
+        const mainContent = document.getElementById('mainContent');
+        const otherTopicsPage = document.getElementById('otherTopicsPage');
+        const goToOtherTopicsBtn = document.getElementById('goToOtherTopicsBtn');
+        const backToMainBtn = document.getElementById('backToMainBtn');
+
+        function showPage(pageToShow) {
+            const pageToHide = pageToShow === mainContent ? otherTopicsPage : mainContent;
+            
+            pageToHide.classList.add('hidden-section');
+            
+            setTimeout(() => {
+                pageToHide.style.display = 'none';
+                pageToShow.style.display = 'block';
+                setTimeout(() => {
+                    pageToShow.classList.remove('hidden-section');
+                }, 50); // Small delay to trigger transition
+            }, 500); // Match transition duration
+        }
+
+        goToOtherTopicsBtn.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+            showPage(otherTopicsPage);
+        });
+
+        backToMainBtn.addEventListener('click', () => {
+            window.scrollTo(0, 0);
+            showPage(mainContent);
+        });
+
+        // Inisialisasi halaman
+        window.addEventListener('load', () => {
+            mainContent.style.display = 'block';
+            otherTopicsPage.style.display = 'none';
+            mainContent.classList.remove('hidden-section');
+            generateQuestion();
+        });
+
+    </script>
+</body>
+</html>
